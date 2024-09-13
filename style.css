@@ -55,7 +55,7 @@ img {
 .our-clases img {
   width: 100%; /* Make sure the image fits its container */
   height: auto;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 /* PARALLAX */
