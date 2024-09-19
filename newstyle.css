@@ -9,8 +9,9 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif; /* Set the font stack for the page */
   font-size: 14px; /* Set the base font size */
-  position: relative;
-  z-index: 1;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: gainsboro;
 }
 
 /* Styles for anchor tags (links) */
@@ -114,29 +115,36 @@ header h1 {
   width: 100%;
   padding: 20px;
   text-align: center; /* Centers the title and text */
-  background-color: ghostwhite;
+  background-color: white;
 }
 .title-box h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  text-align: center;
 }
 .title-box p {
   font-size: 1.2em;
   margin-top: 20px;
   margin-bottom: 14px;
+  text-align: center;
 }
 
 .our-clases {
   width: 360px;
   margin: 4% 0;
   line-height: 25px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 100px rgb(128, 12, 12);
 }
 .our-clases p {
   margin-top: 10px;
+  text-align: center;
   font-size: 16pxw;
   color: #555;
   margin: 16px;
+}
+.our-clases h3 {
+  text-align: center;
+  box-shadow: inset;
 }
 .our-clases img {
   display: flex;
@@ -145,7 +153,12 @@ header h1 {
   height: auto;
   border-radius: 6px;
 }
-/* #######------------------------------------------####### */
+
+/* PARALLAX */
+.parallax {
+  background: url(./images/back-parallax2.jpg) center/cover no-repeat fixed;
+  height: 10em; /* Set the height of the parallax section */
+}
 /* ======Reviews Section======= */
 .title-reviews {
   display: flex;
@@ -191,41 +204,39 @@ header h1 {
 footer p {
   text-align: center;
 }
-/******** Media query for tablet devices (min-width: 767px) ***************/
-@media only screen and (min-width: 767px) {
-  body {
-    font-size: 16px; /* Increase font size for larger screens */
-  }
-  nav {
-    /* height: 50px; */
-  }
-  .mobile_click {
-    display: none;
-  }
-}
+/* -----Media Queries ---- */
 
-/* Media query for desktop devices (min-width: 991px) */
-@media only screen and (min-width: 991px) {
-  header h1 {
-    font-size: 2.3em; /* Increase font size for header text on larger screens */
+/* Mobile view (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+  .heero-section img {
+    height: 300px; /* Smaller image for mobile */
+    filter: brightness(60%);
   }
-  nav {
-    flex-direction: row;
+
+  .title-box h1 {
+    font-size: 1.8em;
   }
-  nav div {
-    padding-left: 40px;
+
+  .title-box p {
+    font-size: 1em;
   }
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    width: auto;
+
+  .about-us-content {
+    flex-direction: column;
+    align-items: center;
   }
-  ul li {
-    border-bottom: unset;
-    padding: 0 40px 0 0;
+
+  .our-clases {
+    width: 90%;
   }
-  #mobile_click {
-    display: none;
+
+  .reviews-item {
+    width: 100%; /* Full width for reviews */
+    filter: brightness(80%);
+    border-radius: 50%;
+  }
+  .reviews-section img {
+    border-radius: 10%;
   }
 }
 
@@ -268,5 +279,42 @@ footer p {
 
   .reviews-item {
     width: 30%;
+  }
+}
+/******** Media query for tablet devices (min-width: 767px) ***************/
+@media only screen and (min-width: 767px) {
+  body {
+    font-size: 16px; /* Increase font size for larger screens */
+  }
+  nav {
+    /* height: 50px; */
+  }
+  .mobile_click {
+    display: none;
+  }
+}
+
+/* Media query for desktop devices (min-width: 991px) */
+@media only screen and (min-width: 991px) {
+  header h1 {
+    font-size: 2.3em; /* Increase font size for header text on larger screens */
+  }
+  nav {
+    flex-direction: row;
+  }
+  nav div {
+    padding-left: 40px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+  ul li {
+    border-bottom: unset;
+    padding: 0 40px 0 0;
+  }
+  #mobile_click {
+    display: none;
   }
 }

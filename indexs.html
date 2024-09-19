@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./newstyle.css">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <nav>
-        <div>
+        <div class="nav-logo">
             <a href="/"><img src="./images/Black Illustrative Fitness Club Logo.png" alt=""></a>
         </div>
-        <ul>
-            <li><a href="./aboutUs.html">About Us</a></li>
-            <li><a href="./reviews.html">Review</a></li>
-            <li><a href="./contact.html">Contact us</a></li>
+        <ul id="mobile_nav" class="nav-list">
+            <li class="nav-item"><a href="./aboutUs.html" target="_blank" class="item-url">About Us</a></li>
+            <li class="nav-item"><a href="./reviews.html" target="_blank" class="item-url">Review</a></li>
+            <li class="nav-item"><a href="./contact.html" target="_blank" class="item-url">Contact us</a></li>
         </ul>
         <div id="mobile_click" class="hamburger">&#8801;</div>
     </nav>
     <header>
         <h1>VITALII PRO FIT</h1>
     </header>
-    <section class="#about-us-container">
+    <section class="about-us-container">
         <div class="title-box">
             <h2>Choose your classes</h2>
             <p>Healthy food is delicious. Doing sport is enjoyable. You just need to start - people said. Nonsense! - I
@@ -55,28 +56,28 @@
             <div class="our-clases">
                 <img src="./images/TRX ZONE.jpg" alt="trx zone">
                 <h3>TRX ZONE</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio sequi soluta ipsa, consequuntur
-                    harum repellendus, a optio officiis eligendi ad asperiores dolore cupiditate ipsum adipisci in nemo,
-                    tempora voluptates odit?</p>
-            </div>
-            <div class="our-clases">
-                <img src="./images/cardio zone.jpg" alt="cardio zone">
-                <h3>CARDIO ZONE</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio sequi soluta ipsa, consequuntur
-                    harum
-                    repellendus, a optio officiis eligendi ad asperiores dolore cupiditate ipsum adipisci in nemo,
-                    tempora
-                    voluptates odit?</p>
+                <p>Experience full-body suspension training with our TRX zone, designed to enhance strength,
+                    flexibility, and core
+                    stability. Perfect for beginners and seasoned athletes alike, TRX offers functional exercises to
+                    meet all fitness goals.</p>
             </div>
             <div class="our-clases">
                 <img src="./images/Crossfit.jpg" alt="crossfit zone">
                 <h3>CROSSFIT ZONE</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio sequi soluta ipsa, consequuntur
-                    harum
-                    repellendus, a optio officiis eligendi ad asperiores dolore cupiditate ipsum adipisci in nemo,
-                    tempora
-                    voluptates odit?</p>
+                <p>Our Crossfit zone features high-intensity functional training with a wide range of equipment. Perfect
+                    for building
+                    strength, endurance, and agility, this space is ideal for those looking to push their limits in
+                    every workout.</p>
             </div>
+            <div class="our-clases">
+                <img src="./images/cardio zone.jpg" alt="cardio zone">
+                <h3>CARDIO ZONE</h3>
+                <p>Boost your cardiovascular health with a variety of machines in our Cardio zone. From treadmills to
+                    elliptical machines,
+                    this space provides everything you need for an intense calorie-burning workout to keep you in top
+                    shape.</p>
+            </div>
+
         </div>
 
     </section>
@@ -88,12 +89,9 @@
             <li class="reviews-item">
                 <div class="review-container">
                     <p class="review">"Vitalii Pro Fit has transformed my fitness journey! The trainers are incredibly
-                        motivating, and
-                        the
+                        motivating, and the
                         workouts are tailored to my goals. I've seen amazing results in just a few months—stronger,
-                        fitter,
-                        and
-                        more confident!"</p>
+                        fitter, and more confident!"</p>
                 </div>
                 <img src="./images/client1.jpg" alt="Photo Julia Sims">
                 <div class="contact-container">
@@ -131,45 +129,28 @@
                     <p class="subtitle-contact">Client Vitalii Pro Fit</p>
                 </div>
             </li>
-            <!-- <li class="reviews-item">
-                <div class="review-container">
-                    <p class="review">"I’ve seen remarkable improvement in my strength and stamina at Vitalii Pro Fit.
-                        The trainers'
-                        knowledge
-                        and motivation are outstanding!"</p>
-                </div>
-                <img src="./images/client4 2.jpg" alt="Photo Chris John">
-                <div class="contact-container">
-                    <h3 class="title-contact">Chris John</h3>
-                    <p class="subtitle-contact">Client Vitalii Pro Fit</p>
-                </div>
-            </li>
-            <li class="reviews-item">
-                <div class="review-container">
-                    <p class="review">"The positive atmosphere at Vitalii Pro Fit makes every workout session a joy.
-                        I've achieved results
-                        faster than I imagined."</p>
-                </div>
-                <img src="./images/client6.jpg" alt="Photo Sarah Lee">
-                <div class="contact-container">
-                    <h3 class="title-contact">Sarah Lee</h3>
-                    <p class="subtitle-contact">Client Vitalii Pro Fit</p>
-                </div>
-            </li>
-            <li class="reviews-item">
-                <div class="review-container">
-                    <p class="review">"The positive atmosphere at Vitalii Pro Fit makes every workout session a joy.
-                        I've achieved results
-                        faster than I imagined."</p>
-                </div>
-                <img src="./images/client6.jpg" alt="Photo Sarah Lee">
-                <div class="contact-container">
-                    <h3 class="title-contact">Sarah Lee</h3>
-                    <p class="subtitle-contact">Client Vitalii Pro Fit</p>
-                </div>
-            </li> -->
 
         </ul>
+    </section>
+    <section id="contact-us">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </section>
     <footer>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias voluptas dolorem sunt quam, harum, eos magnam
@@ -177,6 +158,7 @@
             tenetur facilis!</p>
         &copy; Designed by Vitalii Malovichko
     </footer>
+    <script src="./script.js"></script>
 
 </body>
 

@@ -24,18 +24,109 @@ img {
   object-fit: cover;
 }
 
+/* ----------------------------- Navigation -------------------------------------- */
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1005;
+  background: white;
+  border-bottom: 1px solid slategray;
+}
+.nav-list {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: none;
+  background: white;
+}
+.nav-list .nav-item {
+  width: 100%;
+  height: 70px;
+  list-style: none;
+  border-bottom: 1px solid slategray;
+}
+
+.nav-list .nav-item .item-url {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-weight: 550;
+}
+nav div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav div a {
+  height: 100%;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  padding: 7px 0;
+}
+nav div a img {
+  height: 100%;
+  padding: 5px 0;
+}
+/* active mobile menu */
+.active {
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  top: 60px;
+}
+#mobile_click {
+  position: absolute;
+  right: 10px;
+  color: black;
+  font-size: 40px;
+  cursor: pointer;
+}
+/* -/-------------------------------------------------------------------------/- */
+
+/* ===========================HEADER SEC======================================== */
+header {
+  display: flex; /* Use Flexbox for layout */
+  width: 100%; /* Full width of the container */
+  height: 40vh; /* Set the height to 40% of the viewport height */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background: url(./images/back-parallax2.jpg) center/cover no-repeat;
+  /* no-repeat ensures the image doesn't repeat */
+  background-color: #f3f3f3; /* Optional: if you need a fallback color */
+}
+header h1 {
+  color: white; /* Set the text color to white */
+  font-size: 2.5em; /* Set the font size to 2 times the base size */
+  text-align: center;
+  border-radius: 50%;
+}
+/* \ =========================================================================\ */
+
 /* ====Our classes section==== */
 
 .about-us-container {
   width: 100%;
   padding: 20px;
-
   text-align: center; /* Centers the title and text */
   background-color: ghostwhite;
 }
-.title-box h1 {
-  font-size: 2.5em;
+.title-box h2 {
+  font-size: 2em;
   margin-bottom: 10px;
+  text-align: center;
 }
 .title-box p {
   font-size: 1.2em;
@@ -46,7 +137,10 @@ img {
   width: 360px;
   margin: 4% 0;
   line-height: 25px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px rgb(191, 198, 191);
+}
+.our-clases h3 {
+  text-align: center;
 }
 .our-clases p {
   margin-top: 10px;
@@ -59,18 +153,69 @@ img {
   height: auto;
   border-radius: 6px;
 }
+/**************************************** Media query for tablet devices (min-width: 767px) *********************************************/
 
-/* PARALLAX */
+@media only screen and (min-width: 767px) {
+  body {
+    font-size: 16px; /* Increase font size for larger screens */
+  }
+  nav {
+    /* height: 50px; */
+  }
+  .mobile_click {
+    display: none;
+  }
+}
+
+/* Media query for desktop devices (min-width: 991px) */
+@media only screen and (min-width: 991px) {
+  header h1 {
+    font-size: 2.3em; /* Increase font size for header text on larger screens */
+  }
+  nav {
+    flex-direction: row;
+  }
+  nav .nav-logo {
+    padding-left: 20px;
+  }
+  nav .nav-list {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+  .nav-list .nav-item {
+    border-bottom: unset;
+    padding: 0 40px 0 0;
+    text-align: center;
+  }
+  #mobile_click {
+    display: none;
+  }
+}
+
+/* -------------------PARALLAX -------------------*/
 .parallax {
-  background: url(./images/back-parallax2.jpg) center/cover no-repeat fixed;
-  height: 10em; /* Set the height of the parallax section */
+  background: url(./images/backgraund\ 5\ AI.jpg) center/cover no-repeat fixed;
+  height: 20em; /* Set the height of the parallax section */
 }
 /* ======Reviews Section======= */
+.reviews-section {
+  background-color: ghostwhite;
+  padding: 20px;
+}
+.review-container {
+  min-height: 150px;
+  background-color: rgb(185, 236, 202);
+  border-radius: 4%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid rgb(247, 244, 237);
+}
 .title-reviews {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 30px;
+  padding-top: 20px;
 }
 .reviews-list {
   display: flex;
@@ -94,14 +239,6 @@ img {
   height: 10vh;
   margin-bottom: 1em;
   border-radius: 50%;
-}
-.review-container {
-  min-height: 150px;
-  background-color: rgb(187, 214, 207);
-  border-radius: 5%;
-  padding: 1em;
-  margin-bottom: 1em;
-  border: 1px solid rgb(247, 244, 237);
 }
 
 .contact-container {
@@ -186,4 +323,67 @@ footer p {
   .reviews-item {
     width: 30%;
   }
+}
+/* Contact US */
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#contact-us {
+  background: url(./images/backgraund\ 7\ AI.jpg.jpg) center/cover no-repeat
+    fixed;
+  padding: 50px 20px;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-us h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #000000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+button.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.btn:hover {
+  background: #555;
 }
